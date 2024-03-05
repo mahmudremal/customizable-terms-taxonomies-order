@@ -13,7 +13,7 @@ class Project {
 		// Load class.
 		global $ctto_I18n;$ctto_I18n = I18n::get_instance();
 		global $ctto_Post;$ctto_Post = Post::get_instance();
-		// global $ctto_Ajax;$ctto_Ajax = Ajax::get_instance();
+		global $ctto_Ajax;$ctto_Ajax = Ajax::get_instance();
 		// global $ctto_Menus;$ctto_Menus = Menus::get_instance();
 		// global $ctto_Update;$ctto_Update = Update::get_instance();
 		global $ctto_Assets;$ctto_Assets = Assets::get_instance();

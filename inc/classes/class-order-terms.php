@@ -158,9 +158,14 @@ class Order_Terms {
 				'order_by'		=> (int) $term->order_by,
 			];
 		}
+		$ovaraly_texts = [];
+		if (is_archive()) {
+			$ovaraly_texts[] = '';
+		}
 
 		?>
 		<script>var terms_orders = <?php echo json_encode($terms_order); ?>;</script>
+		<script>var ovaraly_texts = <?php echo json_encode($ovaraly_texts); ?>;</script>
 		<?php
 	}
 }

@@ -23,16 +23,16 @@ class Metabox {
 		}
 	}
 	public function add_meta_boxes() {
-		$screens = ['post', 'page', 'book'];
+		$screens = ['post']; // , 'page', 'book'
 		foreach ($screens as $screen) {
-			add_meta_box('overaly-content', __('Overaly content', 'ctto'), [$this, 'meta_box_content'], $screen, 'normal', 'high');
+			add_meta_box('overaly-content', __('Overaly content', 'ctto'), [$this, 'meta_box_content'], $screen, 'side', 'default');
 		}
 	}
 	public function meta_box_content() {
 		global $post;
 		$text = get_post_meta($post->ID, 'overaly-content', true);
 		?>
-		<textarea name="overaly-content" id="overaly-content-textarea" cols="30" rows="10" class="form-control"><?php echo esc_textarea($text); ?></textarea>
+		<textarea name="overaly-content" id="overaly-content-textarea" cols="20" rows="10" class="form-control"><?php echo esc_textarea($text); ?></textarea>
 		<?php
 	}
 	

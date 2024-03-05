@@ -1,5 +1,5 @@
 # Terms taxonomies order
-Customized wordpress plugin that made for doing some job on WordPress site ([Spring](https://www.spring-architecten.nl)).
+Customized wordpress plugin that made for doing some custom filtering job on WordPress site ([Spring](https://www.spring-architecten.nl)).
 
 ### Functionalities
 * Sortout custom taxonomy
@@ -10,9 +10,18 @@ Customized wordpress plugin that made for doing some job on WordPress site ([Spr
 * Custom preview Projects
   * Made black bar text editable using this.
 ![Projects Screen](/templates/screenshot/projects.png)
+* Custom Overaly Screen
+  * Added Metabox to define overaly
+  * Showing over project
+![Overaly text](/templates/screenshot/metabox.png)
+![Overaly text](/templates/screenshot/overaly.png)
+* Order terms
+  * Order terms on Backend
+  * Showing ordered tabs on frontend
+![Order terms](/templates/screenshot/order.png)
+![Ordered tabs](/templates/screenshot/tabs.png)
 
 <!-- ![Products](/templates/screenshot/dolls-preview.jpg)
-![Hearts](/templates/screenshot/select-hearts.jpg)
 ![Outfits](/templates/screenshot/select-outfits.jpg)
 ![Recorder](/templates/screenshot/voice-addons.jpg)
 ![Confirm](/templates/screenshot/confirmation.jpg) -->
