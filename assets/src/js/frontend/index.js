@@ -28,8 +28,17 @@ import Toastify from 'toastify-js';
 			document.body.addEventListener('load-overalies', (event) => {
 				thisClass.ovaraly_rows = thisClass.lastJson.overalies;
 				thisClass.overalies.forEach(wrapRow => {
-					var resRow = thisClass.ovaraly_rows.find(row => row.post_id == wrapRow.post_id);
+					if (wrapRow.type == 'attachment') {
+						var resRow = thisClass.ovaraly_rows.find(row => row.post_id == wrapRow.post_id && row.image_id == wrapRow.image_id);
+					} else {
+						var resRow = thisClass.ovaraly_rows.find(row => row.post_id == wrapRow.post_id);
+					}
+					
+					// console.log(resRow, wrapRow);
 					if (resRow && resRow?.text) {
+						if (resRow.type == 'attachment') {
+							wrapRow.element = wrapRow.element.parentElement.parentElement;
+						}
 						wrapRow.element.dataset.overlayContent = wrapRow.text = resRow.text;
 						if (resRow.text?.length <= 10) {wrapRow.element.dataset.overlayPosition = 'bottom';}
 					}
@@ -113,27 +122,53 @@ import Toastify from 'toastify-js';
 		ovaraly_texts() {
 			const thisClass = this;this.overalies = [];
 			// const ovaraly_texts = Object.values(window?.ovaraly_texts??{});
-			document.querySelectorAll('.elementor-portfolio-item.elementor-post').forEach(article => {
-				var post_id = thisClass.getPostId(article.className);
-				var element = article.querySelector('.elementor-portfolio-item__overlay')
-				if (post_id && element) {
-					thisClass.overalies.push({
-						post_id: post_id,
-						element: element
-					});
-				}
+			const blocks = {
+				attachment: 'img.attachment-full.size-full[class*="wp-image-"]',
+				portfolio: '.elementor-portfolio-item.elementor-post',
+			};
+			Object.keys(blocks).forEach(key => {
+				document.querySelectorAll(blocks[key]).forEach(article => {
+					var post_id = thisClass.getPostId(
+						article.className,
+						(key == 'portfolio')
+					);
+					var element = (key == 'attachment')?article:article.querySelector('.elementor-portfolio-item__overlay')
+					if (post_id && element) {
+						const args = {
+							post_id: post_id,
+							element: element,
+							type: key
+						};
+						if (key == 'attachment') {
+							args.post_id = thisClass.config.post_id;
+							args.image_id = post_id;
+
+							if (
+								thisClass.overalies.find(row => row.post_id == args.post_id && row.image_id == args.image_id)
+							) {return;}
+						}
+						thisClass.overalies.push(args);
+					}
+				});
 			});
 			// 
 			if (thisClass.overalies.length >= 1) {
 				var formdata = new FormData();
 				formdata.append('action', 'ctto/ajax/post/content');
-				formdata.append('_posts', JSON.stringify(thisClass.overalies.map(row => row.post_id)));
+				formdata.append('_posts', JSON.stringify(
+					thisClass.overalies.map(row => {
+						return {
+							...row,
+							element: false
+						};
+					})
+				));
 				formdata.append('_nonce', thisClass.ajaxNonce);
 				thisClass.sendToServer(formdata);
 			}
 		}
-		getPostId(className) {
-			const regex = /post-(\d+)/;
+		getPostId(className, isPost = true) {
+			const regex = (isPost)?/post-(\d+)/:/wp-image-(\d+)/;
 			const match = className.match(regex);
 			if (match) {return match[1];}
 			return null;

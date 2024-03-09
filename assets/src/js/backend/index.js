@@ -1,5 +1,5 @@
 
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 // import Toastify from 'toastify-js';
 import Sortable from 'sortablejs';
 
@@ -20,6 +20,7 @@ import Sortable from 'sortablejs';
 			// this.init_i18n();
 			// this.init_toast();
 			this.init_events();
+			this.acf_image_overaly();
 		}
 		init_toast() {
 			const thisClass = this;
@@ -127,6 +128,79 @@ import Sortable from 'sortablejs';
 					}
 				});
 			});
+		}
+		acf_image_overaly() {
+			const thisClass = this;
+			document.body.addEventListener('image-content', (event) => {
+				Swal.hideLoading();
+				if (thisClass.lastJson?.text) {
+					document.querySelectorAll('.ctto__textarea').forEach(text => text.innerHTML = thisClass.lastJson.text);
+				}
+			});
+			document.querySelectorAll('#acf-group_64b6788f12903 .acf-image-uploader .acf-actions').forEach(actions => {
+				const action = document.createElement('a');action.href = '#';
+				action.classList.add('acf-icon', '-link-ext', 'dark');
+				action.dataset.name = 'overaly';action.title = 'Overaly';
+				action.dataset.id = '';
+				action.addEventListener('click', (event) => {
+					event.preventDefault();
+					if (event.target.dataset.name == 'overaly') {
+						Swal.fire({
+							title: thisClass.i18n?.img_caption??'Image Caption',
+							width: 600,
+							showConfirmButton: true,
+							showCancelButton: true,
+							showCloseButton: true,
+							allowOutsideClick: false,
+							allowEscapeKey: true,
+							customClass: {popup: 'ctto'},
+							// backdrop: 'rgb(255 255 255 / 90%)',
+							showLoaderOnConfirm: true,
+							allowOutsideClick: false, // () => !Swal.isLoading(),
+							focusConfirm: false,
+							confirmButtonText: `Submit`,
+							
+							html: `<div class="ctto__wrap">
+								<div class="ctto__body">
+									<textarea class="ctto__textarea" name="ctto__textarea" cols="30" rows="10"></textarea>
+								</div>
+							</div>`,
+							didOpen: async () => {
+								Swal.showLoading();
+								var formdata = new FormData();
+								formdata.append('action', 'ctto/ajax/image/content');
+								formdata.append('_nonce', thisClass.ajaxNonce);
+								formdata.append('post_id', thisClass.config.post_id);
+								formdata.append('image_id', action.parentElement.parentElement.previousElementSibling.value);
+								thisClass.sendToServer(formdata);
+							},
+							preConfirm: async (login) => {
+								// return thisClass.prompts.on_Closed(thisClass);
+								try {
+									const requestUrl = `${thisClass.ajaxUrl}?action=ctto/ajax/image/content/update&post_id=${thisClass.lastJson.post_id}&image_id=${thisClass.lastJson.image_id}&_nonce=${thisClass.ajaxNonce}&text=${encodeURI(document.querySelector('.ctto__textarea')?.value??'')}`;
+									const response = await fetch(requestUrl);
+									if (!response.ok) {
+									  return Swal.showValidationMessage(`
+										${JSON.stringify(await response.json())}
+									  `);
+									}
+									return response.json();
+								} catch (error) {
+									Swal.showValidationMessage(`
+									  Request failed: ${error}
+									`);
+								}
+							}
+						}).then( async (result) => {
+							if ( result.isConfirmed ) {
+								console.log(result.value)
+							}
+						});
+					}
+				});
+				actions.appendChild(action);
+			});
+			
 		}
 
 	}

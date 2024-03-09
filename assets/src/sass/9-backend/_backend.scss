@@ -43,3 +43,14 @@
     justify-content: space-between;
   }
 }
+
+
+.ctto {
+  &__wrap {
+    width: 100%;
+    position: relative;
+  }
+  &__textarea {
+    width: 100%;
+  }
+}
