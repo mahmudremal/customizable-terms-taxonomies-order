@@ -17,55 +17,7 @@
 	background:white !important;
 }
 
-
-
-
-
-/*
-*/
-.emrehoverver img:hover {
-    opacity: 0.2 !Important;
-    background: white !important;
-}
-.emrehoverver:hover::before {
-    transform: translateY(140%) !important;
-}
-.eersteerijimg::before {
-   content: "";
-    position: absolute;
-    top: -63%;
-    left: 15%;
-    width: 9rem;
-    height: 10rem;
-    background-color: #000000;
-    transform: translateY(0);
-    transition: transform 0.6s ease;
-}
-.eersteerijimg::before {
-    font-family: "Syntax lt std", Sans-serif;
-    font-size: 16px;
-    line-height: 1em;
-    letter-spacing: 2px;
-    font-weight: 600;
-    color: white;
-    content: "SAMEN\aPLEKKEN\aMAKEN";
-    display: flex;
-    padding-top: 6.9rem;
-    padding-bottom: 0.3rem;
-    padding-left: 0.3rem;
-    text-align: left;
-    white-space: pre;
-	z-index:999;
-	
-}
-.eersteerijimg {
-	overflow:hidden !important;
-}
-
-
-
 /** hover **/
-
 .home .swiper-slide-prev .elementor-widget-heading,
 .home .swiper-slide-prev .elementor-widget-text-editor,
 .home .swiper-slide .elementor-widget-heading,
@@ -83,97 +35,9 @@
 	display: block !important;
 }
 
-/*** before : homepage **/
-.page-id-8575 article:hover {
-transform:scale(1.06) !important;
-}
-.page-id-8575 article {
-	transition: transform .8s ease-in-out !important;
-}
-.page-id-8579 .elementor-portfolio-item__overlay {
-    background-color: #ffffffcf !important;
-}
-.page-id-8579 .elementor-portfolio-item__title {
-	color:black !important;
-	display:none;
-}
-
-#site-header {
-	display: none;
-}
-
-.page-id-8579 .elementor-portfolio__filters {
-	margin-bottom:1.5rem !important;
-}
-.page-id-8579 .ozelegoster {
-	display:block !important;
-	font-family: "Syntax lt std", Sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-	padding-top:5px;
-}
-
-.firstsectionemre section {
-	margin-top:5px !important;
-}
-.page-id-8129 .elementor-portfolio-item__title  {
-	background: black;
-    padding: 5px;
-	padding-bottom:10px;
-    margin: unset;
-    left: unset !important;
-	margin-top:5px;
-transform: translateY(0) !important;
-    transition: transform 0.6s ease !important;
-	    position: absolute;
-	width:100%;
-	margin-left:unset !important;
-	padding-left:90px;
-	padding-top:10px;
-	font-size:16px !important;
-}
-.page-id-8129 .elementor-portfolio-item__overlay {
-	padding:unset !important;
-	margin:unset !important;
-}
-.page-id-8129 .elementor-portfolio-item__overlay::before {
-    top: -65%;
-}
-.altbaslik {
-    font-family: "Syntax lt std", Sans-serif;
-    font-size: 0.9em;
-    font-weight: bold;
-    text-transform: uppercase;
-	background:white;
-	color:black;
-	padding-top: 5px;
-	margin-top:0px;
-}
-.elementor-portfolio-item__img {
-	 transition: 0.5s all ease-in-out !important;
-	z-index:1;
-	
-}
-
 .elementor-slideshow__footer {
 	display: none;
 }
-
-.elementor-portfolio-item__img:hover {
-	overflow:hidden !important;
-	transform: scale(1.1) !important;
-}
-.elementor-post__thumbnail__link {
-	overflow:hidden;
-}
-
-/*.elementor-widget-loop-carousel.elementor-element :is(.swiper,.swiper-container)~.elementor-swiper-button-prev {
-     top: calc(var(--arrow-prev-top-align) + var(--arrow-prev-top-position) - var(--arrow-prev-caption-spacing)); 
-     left: calc(var(--arrow-prev-left-align) + var(--arrow-prev-left-position)); 
-     transform: translate(var(--arrow-prev-translate-x),var(--arrow-prev-translate-y)); 
-    display: none;
-}*/
 
 .elementor-tab-desktop-title {
     padding: 18px 22px 0px 0px !Important;
@@ -183,7 +47,6 @@ transform: translateY(0) !important;
     overflow: hidden;
     padding-left: 21px;
 }
-
 
 @keyframes fadeUp {
     from {
@@ -200,50 +63,6 @@ transform: translateY(0) !important;
 .elementor-element.fadeInUp {
     animation-name: fadeUp
 }
-
-
-/*zwart vlak overlay dave*/
-/*dit 1e stuk code blokkeert de dropdown effect*/ 
-.elementor-widget-container:not([data-elementor-type="loop-item"]) picture.attachment-medium_large:before {
-    display: none;
-}
-/*einde 1e stuk*/
-
-.elementor-widget-container picture.attachment-medium_large:before {
-    content: "";
-    position: absolute;
-    top: -60%;
-    left: 15%;
-    width: 7rem;
-    height: 7rem;
-    background-color: #000000;
-    transform: translateY(0);
-    transition: transform 0.6s ease, opacity 1s ease;
-	z-index:9 !important;
-	opacity: 0;
-}
-
-.elementor-widget-container picture.attachment-medium_large:hover:before {
-    font-family: "Syntax lt std", Sans-serif;
-    font-size: 16px;
-    line-height: 1em;
-    letter-spacing: 5px;
-    font-weight: 600;
-    color: white;
-    content: "SAMEN\aPLEKKEN\aMAKEN" !important;
-    display: flex;
-    padding-top: 3.9rem;
-    padding-bottom: 0.3rem;
-    padding-left: 0.3rem;
-    text-align: left;
-    white-space: pre;
-}
-
-.elementor-widget-container picture.attachment-medium_large:hover:before {
-    transform: translateY(124%); /* Move the black box downwards */
-	opacity:1;
-}
-/*einde zwart vlak overlay dave*/
 
 /* Prevent horizontal scrolling and set max width for html and body elements */
 html, body {
@@ -266,10 +85,6 @@ visibility: hidden;
 .elementor-5729 .elementor-element.elementor-element-5fe4555a .elementor-swiper-button:hover {
     background-color: #303030;
     color: white;
-}
-.page-id-8005 .elementor-portfolio-item__overlay::before {
-    top: -62%;
-
 }
 
 /*Hide sticky shadow */
@@ -308,11 +123,6 @@ visibility: hidden;
   transition: none; /* Remove any transition effect */
 }
 
-.elementor-portfolio__filters {
-    justify-content: left !Important;
-	   margin-left: -7px !Important;
- } 
-
 .slider .owl-dot.active span {
   background: #F0EFEA; /* The active dot indicator will be #F0EFEA */
   box-shadow: 0 0 0 2px #000; /* Add a black circle using box-shadow */
@@ -338,294 +148,19 @@ visibility: hidden;
   }
 }
 
-.elementor-13 .elementor-element.elementor-element-aef77f7 .elementor-portfolio__filters {
-    margin-left: -33rem;
-}
-
 .carousel .owl-dots {
 	padding-right: 5rem;
 }
 
-/*overlay project emre?*/
-/* Target the overlay and create the black square */
-.elementor-portfolio-item__overlay::before {
-    content: ""; /* This is required for pseudo-elements */
-    position: absolute;
-    top: -63%;
-    left: 15%;
-    width: 9rem; /* Adjust as needed */
-    height: 10rem; /* Adjust as needed */
-    background-color: #000000 ;
-	transform: translateY(0); /* Initial position */
-    transition: transform 0.6s ease; /* Transition for dropping effect */
-}
-
-/* Style the text inside the black square */
-.elementor-portfolio-item__overlay::before {
-	font-family: "Syntax lt std", Sans-serif;
-    font-size: 16px; /* Adjust as needed */
-	line-height: 1em;
-	letter-spacing: 5px;
-	font-weight: 600;
-    color: white;
-    content: "SAMEN\aPLEKKEN\aMAKEN"; /* Your three words here */
-    display: flex;
-    padding-top: 6.9rem;
-    padding-bottom: 0.3rem;
-    padding-left: 0.3rem;
-    text-align: left;
-    white-space: pre;
-}
-/* On hover, move the black square downwards to reveal */
-.elementor-portfolio-item__overlay:hover::before {
-    transform: translateY(140%); /* Move the black box downwards */
-}
-.elementor-portfolio-item__overlay .elementor-portfolio-item__title {
-		content: ""; /* This is required for pseudo-elements*/ 
-    position: absolute;
-    text-align: left;
-    font-weight: 600;
-    top: 90%;
-    left: 4%;
-
-}
-/*overlay project emre? eind*/
-
-@media only screen and (max-width: 1024px) {
-  .elementor-13 .elementor-element.elementor-element-aef77f7 .elementor-portfolio__filters {
-    margin-left: -6rem;
-	}
-}
-
-/* Media query for tablet */
-@media (max-width: 768px) {
-/* Target the overlay and create the black square */
-.elementor-portfolio-item__overlay::before {
-    content: ""; /* This is required for pseudo-elements */
-    position: absolute;
-    top: -60%;
-    left: 4%;
-    width: 8rem; /* Adjust as needed */
-    height: 8.5rem; /* Adjust as needed */
-    background-color: black;
-	transform: translateY(0); /* Initial position */
-    transition: transform 0.6s ease; /* Transition for dropping effect */
-}
-	
-.elementor-8579 .elementor-element.elementor-element-e98775f .elementor-portfolio__filter:not(:first-child) {
-	margin-left: calc(0px/2) !Important;
-}
-	
-.page-id-8579 .elementor-portfolio__filters {
-	margin-bottom: 7px !important;
-} 
-
-/* Style the text inside the black square */
-.elementor-portfolio-item__overlay::before {
-	font-family: "Syntax lt std roman", Sans-serif;
-    font-size: 16px; /* Adjust as needed */
-	line-height: 1em;
-    color: white;
-    content: "SAMEN\aPLEKKEN\aMAKEN"; /* Your three words here */
-    display: flex;
-    padding-top: 5rem;
-    padding-bottom: 0rem;
-    padding-left: 1rem;
-    text-align: left;
-    white-space: pre;
-}
-/* On hover, move the black square downwards to reveal */
-.elementor-portfolio-item__overlay:hover::before {
-    transform: translateY(111%); /* Move the black box downwards */
-}
-.elementor-portfolio-item__overlay .elementor-portfolio-item__title {
-		content: ""; /* This is required for pseudo-elements*/ 
-    position: absolute;
-    text-align: left;
-    font-weight: 600;
-    top: 90%;
-    left: 4%;
-
- }
-}
-
 /* Media query for mobile */
 @media (max-width: 480px) {
-	
-.eersteerijimg::before {
-    top: -67%;
-    left: 4%;
-    width: 6.5rem;
-    height: 6.7rem;
-}
-
-.eersteerijimg::before {
-    font-size: 12px;
-    padding-top: 4rem;
-    padding-bottom: 1px !important;
-    padding-left: 5px;
-    padding-right: 1rem;
-	line-height:12px !important;
-}
-
-.elementor-portfolio-item__overlay::before {
-    font-family: "Syntax lt std roman", Sans-serif;
-    font-size: 12px;
-    color: white;
-    content: "SAMEN\aPLEKKEN\aMAKEN";
-    display: flex;
-    padding-top: 4rem;
-    padding-bottom: 1px !important;
-    padding-left: 5px;
-    padding-right: 1rem;
-    text-align: -webkit-left !important;
-    white-space: pre!important;
-	line-height:12px !important;
-}
-
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
 	left: 0rem;
 }
-	  .elementor-13 .elementor-element.elementor-element-aef77f7 .elementor-portfolio__filters {
-    margin-left: -1rem;
-	}
 	
 	.carousel .owl-dots {
 	padding-right: 0rem;
 	}
-	
-.elementor-8579 .elementor-element.elementor-element-e98775f .elementor-portfolio__filter:not(:first-child) {
-margin-left: calc(-35px/2) !Important;
-}
-	
-/* Target the overlay and create the black square */
-.elementor-portfolio-item__overlay::before {
-    content: ""; /* This is required for pseudo-elements */
-    position: absolute;
-    top: -140%;
-    left: 15%;
-    width: 6.6rem; /* Adjust as needed */
-    height: 6.9rem; /* Adjust as needed */
-    background-color: black;
-	transform: translateY(0); /* Initial position */
-    transition: transform 0.6s ease; /* Transition for dropping effect */
-}
-
-/* Style the text inside the black square */
-.elementor-portfolio-item__overlay::before {
-	font-family: "Syntax lt std roman", Sans-serif;
-    font-size: 12px; /* Adjust as needed */
-	line-height: 1em;
-    color: white;
-    content: "SAMEN\aPLEKKEN\aMAKEN"; /* Your three words here */
-    display: flex;
-    padding-top: 4.4rem;
-    padding-bottom: 3rem;
-    padding-left: 0.3rem;
-    padding-right: 1rem;
-    text-align: left;
-    white-space: pre;
-}
-
-/* On hover, move the black square downwards to reveal */
-.elementor-portfolio-item__overlay:hover::before {
-    transform: translateY(140%); /* Move the black box downwards */
-}
-.elementor-portfolio-item__overlay .elementor-portfolio-item__title {
-		content: ""; /* This is required for pseudo-elements*/ 
-    position: absolute;
-    text-align: left;
-    font-weight: 600;
-    top: 87%;
-    left: 4%;
-
-	}
-}
-
-.ozelegoster {
-	display:none;
-}
-/** 1. sayfa **/
-.elementor-portfolio-item__overlay {
-    z-index: 999;
-	
-}
-
-/** 2. sayfa **/
-.elementor-page-7942 .elementor-portfolio-item__overlay {
-    z-index: 999;
-	
-}
-
-.elementor-page-7942  .elementor-portfolio-item__title {
-	left:unset !important;
-	right: 4%;
-}
-/** 3. sayfa **/
-.elementor-page-7961 .elementor-portfolio-item__title {
-	display:none !important;
-	
-}
-.elementor-page-7961 .ozelegoster {
-	margin-top:5px;
-	display:block !important; 
-	    font-family: "Syntax lt std", Sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-transform: uppercase;
-	
-}
-
-.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-    font-weight: 600;
-}
-.page-id-8129 .elementor-portfolio-item__overlay::before {
-    top: -65% !important;
-}
-.page-id-8129 .ozelegoster {
-	background:white !important;
-		display:block !important; 
-	color:black !important;
-	   font-family: "Syntax lt std", Sans-serif;
-    font-size: 16px !important;
-    font-weight: bold;
-    text-transform: uppercase;
-	padding-top:6px;
-}
-.page-id-8129 .elementor-portfolio-item__title {
-	display:none !important;
-}
-
-.page-id-8488 .elementor-portfolio-item__overlay::before {
-    top: -65% !important;
-}
-.page-id-8488 .ozelegoster {
-	background:white !important;
-		display:block !important; 
-	color:black !important;
-	   font-family: "Syntax lt std", Sans-serif;
-    font-size: 16px !important;
-    font-weight: bold;
-    text-transform: uppercase;
-	padding-top:6px;
-}
-.page-id-8488 .elementor-portfolio-item__title {
-	display:none !important;
-}
-.elementor-portfolio-item__overlay::before {
-    letter-spacing: 2px !important;
-}
-.page-id-8488 article:hover {
-	top:-10px;
-	position: relative;
-}
-.page-id-8488 article {
-transition: top ease 0.5s;
-	  position: relative;
-	top:0px;
-}
-.page-id-8488 .elementor-portfolio__filters {
-	margin-bottom:1.5rem !important;
 }
 
 .hover-text1, .hover-text2, .hover-text3, .hover-text4, .hover-text5,
@@ -666,22 +201,6 @@ transition: top ease 0.5s;
     transition: unset !important;
 }
 
-@media only screen and (max-width: 900px) {
-    .elementor-portfolio-item__overlay::before {
-        top: -75%;
-    }
-}
-
-.elementor-portfolio-item__overlay::before {
-    top: -15em !important; 
-}
-
-@media only screen and (max-width: 768px) {
-    .elementor-portfolio-item__overlay::before {
-        top: -13em !important; 
-    }
-}
-
 .swiper-slide h2, .swiper-slide h3, .swiper-slide-prev h2, .swiper-slide-prev h3{
 display:none !important;	
 }
@@ -689,12 +208,12 @@ display:none !important;
 	display:block !important
 }
 
-.elementor-portfolio-item__overlay[data-overlay-content]::before,
+/* .elementor-portfolio-item__overlay[data-overlay-content]::before,
 .elementor-widget-container picture.attachment-medium_large[data-overlay-content]:hover::before,
 .eersteerijimg[data-overlay-content]::before,
 [data-overlay-content]::before {
     content: attr(data-overlay-content);
-}
+} */
 /**/
 .elementor-portfolio-item__overlay[data-overlay-position="bottom"]::before,
 .elementor-widget-container picture.attachment-medium_large[data-overlay-position="bottom"]:hover::before,
@@ -726,3 +245,413 @@ display:none !important;
         padding-top: 5rem;
     }
 }
+
+/* Overlay project */
+/* .elementor-portfolio-item__overlay::before {
+    content: "";
+    position: absolute;
+    top: -63%;
+    left: 15%;
+    width: 9rem;
+    height: 10rem;
+    background-color: #000;
+    font-family: "Syntax lt std", Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    padding: 6.9rem 0.3rem 0.3rem 0.3rem;
+    line-height: 1em;
+    letter-spacing: 5px;
+    text-align: left;
+    white-space: pre;
+    transform: translateY(0);
+    transition: transform 0.6s ease;
+} */
+
+.elementor-portfolio-item__overlay:hover::before {
+    transform: translateY(140%);
+}
+
+.elementor-portfolio-item__overlay .elementor-portfolio-item__title {
+    content: "";
+    position: absolute;
+    text-align: left;
+    font-weight: 600;
+    top: 90%;
+    left: 4%;
+}
+
+.elementor-portfolio-item__img {
+    transition: 0.5s all ease-in-out !important;
+    z-index: 1;
+}
+
+.elementor-portfolio-item__img:hover {
+    overflow: hidden !important;
+    transform: scale(1.1) !important;
+}
+
+.elementor-post__thumbnail__link {
+    overflow: hidden;
+}
+
+.page-id-8005 .elementor-portfolio-item__overlay::before {
+    top: -62%;
+}
+
+/* Titel below project on projectpage*/
+.page-id-8575 article:hover {
+    transform: scale(1.06) !important;
+}
+
+.page-id-8575 article {
+    transition: transform 0.8s ease-in-out !important;
+}
+
+.page-id-8579 .elementor-portfolio-item__overlay {
+    background-color: #ffffffcf !important;
+}
+
+.page-id-8579 .elementor-portfolio-item__title {
+    color: black !important;
+    display: none;
+}
+
+.page-id-8579 .elementor-portfolio__filters {
+    margin-bottom: 1.5rem !important;
+}
+
+.page-id-8579 .ozelegoster {
+    display: block !important;
+    font-family: "Syntax lt std", Sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 5px;
+}
+
+.firstsectionemre section {
+    margin-top: 5px !important;
+}
+
+.page-id-8129 .elementor-portfolio-item__title {
+    background: black;
+    padding: 5px;
+    padding-bottom: 10px;
+    margin: unset;
+    left: unset !important;
+    margin-top: 5px;
+    transform: translateY(0) !important;
+    transition: transform 0.6s ease !important;
+    position: absolute;
+    width: 100%;
+    margin-left: unset !important;
+    padding-left: 90px;
+    padding-top: 10px;
+    font-size: 18px !important;
+}
+
+.page-id-8129 .elementor-portfolio-item__overlay {
+    padding: unset !important;
+    margin: unset !important;
+}
+
+.page-id-8129 .elementor-portfolio-item__overlay::before {
+    top: -65%;
+}
+
+.altbaslik {
+    font-family: "Syntax lt std", Sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: white;
+    color: black;
+    padding-top: 5px;
+    margin-top: 0px;
+}
+
+/* Filters portfolio */
+.elementor-portfolio__filters {
+    justify-content: left !Important;
+	margin-left: -7px !Important;
+} 
+
+.elementor-13 .elementor-element.elementor-element-aef77f7 .elementor-portfolio__filters {
+    margin-left: -33rem;
+}
+
+/* Eerste plaatje project*/
+.emrehoverver img:hover {
+    opacity: 0.2 !important;
+    background: white !important;
+}
+
+.emrehoverver:hover::before {
+    transform: translateY(140%) !important;
+}
+
+/* First image projectpage */
+/* .eersteerijimg::before {
+    content: "";
+    position: absolute;
+    top: -63%;
+    left: 15%;
+    width: 9rem;
+    height: 10rem;
+    background-color: #000;
+    font-family: "Syntax lt std", Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    padding: 6.9rem 0.3rem 0.3rem 0.3rem;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-align: left;
+    white-space: pre;
+    transform: translateY(0);
+    transition: transform 0.6s ease;
+    z-index: 999;
+}
+
+.eersteerijimg {
+    overflow: hidden !important;
+} */
+
+.ozelegoster {
+	display:none;
+}
+
+/** 1. sayfa **/
+.elementor-portfolio-item__overlay {
+    z-index: 999;
+}
+
+/** 2. sayfa **/
+.elementor-page-7942 .elementor-portfolio-item__overlay {
+    z-index: 999;
+}
+
+.elementor-page-7942  .elementor-portfolio-item__title {
+	left:unset !important;
+	right: 4%;
+}
+
+/** 3. sayfa **/
+.elementor-page-7961 .elementor-portfolio-item__title {
+	display:none !important;
+	
+}
+.elementor-page-7961 .ozelegoster {
+	margin-top:5px;
+	display:block !important; 
+	    font-family: "Syntax lt std", Sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+	
+}
+
+.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+    font-weight: 600;
+}
+.page-id-8129 .elementor-portfolio-item__overlay::before {
+    top: -65% !important;
+}
+.page-id-8129 .ozelegoster {
+	background:white !important;
+		display:block !important; 
+	color:black !important;
+	   font-family: "Syntax lt std", Sans-serif;
+    font-size: 16px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+	padding-top:6px;
+}
+.page-id-8129 .elementor-portfolio-item__title {
+	display:none !important;
+}
+
+.page-id-8488 .elementor-portfolio-item__overlay::before {
+    top: -65% !important;
+}
+
+.page-id-8488 .ozelegoster {
+	background:white !important;
+		display:block !important; 
+	color:black !important;
+	   font-family: "Syntax lt std", Sans-serif;
+    font-size: 16px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+	padding-top:6px;
+}
+
+.page-id-8488 .elementor-portfolio-item__title {
+	display:none !important;
+}
+
+.elementor-portfolio-item__overlay::before {
+    letter-spacing: 2px !important;
+}
+
+.page-id-8488 article:hover {
+	top:-10px;
+	position: relative;
+}
+
+.page-id-8488 article {
+transition: top ease 0.5s;
+	  position: relative;
+	top:0px;
+}
+
+.page-id-8488 .elementor-portfolio__filters {
+	margin-bottom:1.5rem !important;
+}
+
+.elementor-portfolio-item__overlay::before {
+    top: -15em !important;
+}
+
+@media only screen and (max-width: 1024px) {
+.elementor-13 .elementor-element.elementor-element-aef77f7 .elementor-portfolio__filters {
+    margin-left: -6rem;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+    .elementor-portfolio-item__overlay::before {
+        top: -75%;
+    }
+}
+
+@media (max-width: 768px) {
+.elementor-portfolio-item__overlay::before {
+    top: -60%;
+    left: 4%;
+    width: 8rem;
+    height: 8.5rem;
+}
+
+.elementor-8579 .elementor-element.elementor-element-e98775f .elementor-portfolio__filter:not(:first-child) {
+    margin-left: 0 !important;
+}
+
+.page-id-8579 .elementor-portfolio__filters {
+    margin-bottom: 7px !important;
+}
+	
+.elementor-portfolio-item__overlay::before {
+  font-size: 16px;
+  line-height: 1em;
+  padding: 5rem 0rem 0rem 1rem;
+}
+	
+.elementor-portfolio-item__overlay:hover::before {
+    transform: translateY(111%);
+}
+	
+.elementor-portfolio-item__overlay .elementor-portfolio-item__title {
+    text-align: left;
+    top: 90%;
+    left: 4%;
+}
+	
+.elementor-portfolio-item__overlay::before {
+        top: -13em !important; 
+    }
+}
+
+@media (max-width: 480px) {
+.eersteerijimg::before {
+    top: -67%;
+    left: 4%;
+    width: 6.5rem;
+    height: 6.7rem;
+}
+
+.eersteerijimg::before {
+    font-size: 12px;
+    padding-top: 4rem;
+    padding-bottom: 1px !important;
+    padding-left: 5px;
+    padding-right: 1rem;
+	line-height:12px !important;
+}
+
+.elementor-portfolio-item__overlay::before {
+    font-size: 12px;
+    padding-top: 4rem;
+    padding-bottom: 1px !important;
+    padding-left: 5px;
+    padding-right: 1rem;
+	line-height:12px !important;
+}
+
+.elementor-13 .elementor-element.elementor-element-aef77f7 .elementor-portfolio__filters {
+    margin-left: -1rem;
+}
+
+.elementor-portfolio-item__overlay::before {
+    top: -140%;
+    left: 15%;
+    width: 6.6rem;
+    height: 6.9rem;
+}
+
+.elementor-portfolio-item__overlay::before {
+    font-size: 12px;
+    line-height: 1em;
+    padding: 4.4rem 1rem 3rem 0.3rem;
+}
+
+.elementor-portfolio-item__overlay:hover::before {
+    transform: translateY(140%);
+}
+
+.elementor-portfolio-item__overlay .elementor-portfolio-item__title {
+    font-weight: 600;
+    top: 87%;
+    left: 4%;
+	}
+}
+
+/* Zwart vlak op projectpagina
+.elementor-widget-container:not([data-elementor-type="loop-item"]) picture.attachment-medium_large:before {
+    display: none;
+}
+
+.elementor-widget-container picture.attachment-medium_large:before {
+    content: "" !important;
+    position: absolute;
+    top: -60%;
+    left: 15%;
+    width: 7rem;
+    height: 7rem;
+    background-color: #000;
+    font-family: "Syntax lt std", Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    padding: 3.9rem 0.3rem 0.3rem 0.3rem;
+    line-height: 1em;
+    letter-spacing: 5px;
+    text-align: left;
+    white-space: pre;
+    transition: transform 0.6s ease, opacity 1s ease;
+    z-index: 9 !important;
+    opacity: 0;
+}
+
+.elementor-widget-container picture.attachment-medium_large:hover:before {
+    transform: translateY(124%);
+    opacity: 1;
+}
+*/

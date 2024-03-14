@@ -37,10 +37,15 @@ import Toastify from 'toastify-js';
 					// console.log(resRow, wrapRow);
 					if (resRow && resRow?.text) {
 						if (resRow.type == 'attachment') {
-							wrapRow.element = wrapRow.element.parentElement.parentElement;
+							// wrapRow.element = wrapRow.element.parentElement.parentElement;
 						}
 						wrapRow.element.dataset.overlayContent = wrapRow.text = resRow.text;
 						if (resRow.text?.length <= 10) {wrapRow.element.dataset.overlayPosition = 'bottom';}
+						const blackbar = document.createElement('div');
+						blackbar.classList.add('elementor-post__thumbnail__blackbar', 'on-hover-visible');
+						blackbar.innerHTML = wrapRow.text.trim().replaceAll('\n', '<br/>');
+						wrapRow.element.parentElement.style.overflow = 'hidden';
+						wrapRow.element.parentElement.insertBefore(blackbar, wrapRow.element);
 					}
 				});
 			});

@@ -15,7 +15,7 @@ class Assets {
 		$this->setup_hooks();
 	}
 	protected function setup_hooks() {
-		// add_action('wp_enqueue_scripts', [$this, 'register_styles']);
+		add_action('wp_enqueue_scripts', [$this, 'register_styles']);
 		add_action('wp_enqueue_scripts', [$this, 'register_scripts']);
 		
 		add_action('admin_enqueue_scripts', [$this, 'admin_enqueue_scripts'], 10, 1);
