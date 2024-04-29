@@ -56,7 +56,7 @@ class Order_Terms {
 										</div>
 									</div>
 									
-									<ul class="term_order__list" data-group="<?php echo esc_attr($term->taxonomy); ?>">
+									<ul class="term_order__list" data-group="<?php echo esc_attr($taxonomy); ?>">
 										<?php foreach ($terms as $index => $term) : ?>
 										<li class="term_order__listitem">
 											<!-- [<?php echo esc_attr($term->taxonomy); ?>] -->
@@ -114,9 +114,13 @@ class Order_Terms {
 			$terms[$key]->order_by = get_term_meta($term->term_id, '_order_accordingly', true);
 		}
 		// 
-		usort($terms, function($a, $b) {
-			return $a->order_by - $b->order_by;
-		});
+		try {
+			usort($terms, function($a, $b) {
+				return $a->order_by - $b->order_by;
+			});
+		} catch (\Error $th) {
+			//throw $th;
+		}
 		return $terms;
 	}
 
